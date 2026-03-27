@@ -1,4 +1,6 @@
 #pragma once
+#include <stdexcept>
+
 
 namespace calculator {
 
@@ -9,6 +11,8 @@ public:
     
     // Простое сложение
     int add(int a, int b);
+
+    double divide(int numerator, int denominator);
 };
 
 } // namespace calculator
