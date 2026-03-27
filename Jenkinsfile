@@ -8,15 +8,6 @@ pipeline {
             }
         }
         
-        stage('Install Dependencies') {
-            steps {
-                sh '''
-                    apt-get update
-                    apt-get install -y cmake build-essential
-                '''
-            }
-        }
-        
         stage('Configure') {
             steps {
                 sh '''
