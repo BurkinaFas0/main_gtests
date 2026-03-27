@@ -11,8 +11,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh '''
-                    sudo apt-get update
-                    sudo apt-get install -y cmake build-essential
+                    apt-get update
+                    apt-get install -y cmake build-essential
                 '''
             }
         }
