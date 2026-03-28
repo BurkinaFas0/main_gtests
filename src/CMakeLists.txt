@@ -7,5 +7,14 @@ target_include_directories(calculator_lib PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+
 # Указываем, что это интерфейсная библиотека для удобства
 target_compile_features(calculator_lib PUBLIC cxx_std_17)
+
+
+# Исполняемая программа
+add_executable(calculator
+    calculator/main.cpp
+)
+
+target_link_libraries(calculator PRIVATE calculator_lib)
